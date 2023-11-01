@@ -1,0 +1,39 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* COLORS */
+    --main-bg-color: #031927;
+    --main-content-bg-color: #fff;
+    --main-primary-text-color: #fff;
+    --main-secondary-text-color: #333;
+
+    /* FONTS SIZES */
+
+    /* Desktop */
+    --font-size-header-title-desktop: 60px;
+    --font-size-header-subtitle-desktop: 30px;
+
+    --font-size-content-title-desktop: 120px;
+    --font-size-content-subtitle-desktop: 40px;
+    --font-size-content-text-and-links-desktop: 24px;
+    /* Mobile */
+    --font-size-header-title-mobile: 24px;
+    --font-size-header-subtitle-mobile: 16px;
+
+    --font-size-content-title-mobile: 40px;
+    --font-size-content-subtitle-mobile: 30px;
+    --font-size-content-text-mobile: 16px;
+    --font-size-content-links-mobile: 18px;
+    --font-size-content-copyright-mobile: 14px;
+
+    /* FONTS WEIGHTS */
+    
+    /* General */
+    --font-weight-general: 300;
+    --font-weight-content-title: 500;
+    --font-weight-content-subtitle: 400;
+    
+}
