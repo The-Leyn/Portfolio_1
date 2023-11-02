@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -37,3 +38,96 @@
     --font-weight-content-subtitle: 400;
     
 }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--main-bg-color);
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    background: var(--main-content-bg-color);
+    position: absolute;
+    height: 155%;
+    width: 120%;
+    transform: rotate(-60deg);
+    /* width: 2231.692px;
+    height: 1490.387px;
+    transform: rotate(117.958deg);   */
+    z-index: 1;
+}
+.container {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(4px + 1.3vw);
+    overflow: hidden;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    background: var(--main-content-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    gap: 20px;
+}
+.content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+/* HEADER */
+.header-text h1, .header-text h2{
+    font-style: normal;
+    font-weight: var(--font-weight-general);
+    line-height: 115%; 
+}
+.header-text h1{
+    font-size: var(--font-size-header-title-desktop);
+}
+.header-text h2 {
+    font-size: var(--font-size-header-subtitle-desktop);
+}
+.header-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-social a {
+    padding: 10px;
+}
+.header-social a:hover svg {
+    transform: scale(1.15);
+    transition: transform .1s ease-out;
+}
+.header-social svg {
+    width: 40px;
+    height: 41px;
+}
+/* END HEADER */
+/* MAIN */
+main {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--main-bg-color);
+}
+/* END MAIN */
