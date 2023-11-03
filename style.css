@@ -13,22 +13,13 @@
 
     /* FONTS SIZES */
 
-    /* Desktop */
-    --font-size-header-title-desktop: 60px;
-    --font-size-header-subtitle-desktop: 30px;
+    /* Responsive */
+    --font-size-header-title-responsive: max(1.5em, 3vw);
+    --font-size-header-subtitle-responsive: max(1.0em, 1.5vw);
 
-    --font-size-content-title-desktop: 120px;
-    --font-size-content-subtitle-desktop: 40px;
-    --font-size-content-text-and-links-desktop: 24px;
-    /* Mobile */
-    --font-size-header-title-mobile: 24px;
-    --font-size-header-subtitle-mobile: 16px;
-
-    --font-size-content-title-mobile: 40px;
-    --font-size-content-subtitle-mobile: 30px;
-    --font-size-content-text-mobile: 16px;
-    --font-size-content-links-mobile: 18px;
-    --font-size-content-copyright-mobile: 14px;
+    --font-size-content-title-responsive: max(2.4em, 6.3vw);
+    --font-size-content-subtitle-responsive: 40px;
+    --font-size-content-text-and-links-responsive: max(1em, 1.25vw);
 
     /* FONTS WEIGHTS */
     
@@ -52,9 +43,6 @@ body {
     height: 155%;
     width: 150%;
     transform: rotate(-50deg);
-    /* width: 2231.692px;
-    height: 1490.387px;
-    transform: rotate(117.958deg);   */
     z-index: 1;
 }
 .container {
@@ -75,7 +63,6 @@ body {
     width: 100%;
     height: 100%;
     background: var(--main-content-bg-color);
-    /* padding: 20px; */
     padding: calc(6px + 0.8vw);
     border-radius: 10px;
     overflow: hidden;
@@ -98,12 +85,10 @@ body {
     line-height: 115%; 
 }
 .header-text h1{
-    /* font-size: var(--font-size-header-title-desktop); */
-    font-size: max(1.5em, 3vw);
+    font-size: var(--font-size-header-title-responsive);
 }
 .header-text h2 {
-    /* font-size: var(--font-size-header-subtitle-desktop); */
-    font-size: max(1.0em, 1.5vw);
+    font-size: var(--font-size-header-subtitle-responsive);
 }
 .header-social {
     display: flex;
@@ -127,7 +112,6 @@ main {
     display: flex;
     padding: 20px;
     gap: 20px;
-    /* flex: 1 0 0; */
     align-self: stretch;
     border-radius: 10px;
     background: var(--main-bg-color);
@@ -136,8 +120,7 @@ main {
 }
 .content > a {
     color: var(--main-primary-text-color);
-    /* font-size: var(--font-size-content-text-and-links-desktop); */
-    font-size: max(1em, 1.25vw);
+    font-size: var(--font-size-content-text-and-links-responsive);
     font-weight: var(--font-weight-general);
     position: absolute;
     bottom: 30px;
@@ -154,8 +137,7 @@ main {
 }
 .main-info h2 {
     color: var(--main-primary-text-color);
-    /* font-size: var(--font-size-content-title-desktop); */
-    font-size: max(2.4em, 6.3vw);
+    font-size: var(--font-size-content-title-responsive);
     font-weight: var(--font-weight-content-title);
     position: relative;
     right: 20px;
@@ -188,9 +170,7 @@ main {
  }
 .main-description p {
     color: var(--main-primary-text-color);
-    /* font-size: var(--font-size-content-text-and-links-desktop); */
     font-size: max(1em, 1.25vw);
-
     font-weight: var(--font-weight-general);
     line-height: 170%;
     margin-right: 20px;
@@ -204,7 +184,6 @@ main {
 }
 .project-nav h3 {
     color: var(--main-primary-text-color);
-    /* font-size: var(--font-size-content-subtitle-desktop); */
     font-size: max(2em, 1.25vw);
     font-weight: var(--font-weight-content-subtitle);
 }
@@ -223,8 +202,7 @@ main {
 }
 .project-nav nav a {
     color: var(--main-primary-text-color);
-    /* font-size: var(--font-size-content-text-and-links-desktop); */
-    font-size: max(1em, 1.25vw);
+    font-size: var(--font-size-content-text-and-links-responsive);
     position: relative;
     text-decoration: none;
     transition: letter-spacing .3s ease-out;
@@ -244,9 +222,6 @@ main {
 /* END MAIN */
 /* RESPONSIVE */
 @media (max-width: 1100px) {
-    /* .banner {
-        transform: rotate(30deg);
-    } */
     .header-social a {
         padding: 5px;
     }
@@ -258,8 +233,6 @@ main {
         width: 30px;
         height: 29px;
     }
-}
-@media (max-width: 1100px) {
     .content {
         gap: 10px;
     }
