@@ -244,6 +244,7 @@ main {
     position: relative;
     text-decoration: none;
     transition: letter-spacing .3s ease-out;
+    cursor: pointer;
 }
 .project-nav nav a:hover {
     letter-spacing: 0.5px;
@@ -295,6 +296,9 @@ main {
     }
     .main-description p{
         margin-right: 0;
+    }
+    .main-project {
+        flex-direction: column;
     }
     .project-nav {
         width: 100%;
