@@ -245,6 +245,7 @@ main {
     text-decoration: none;
     transition: letter-spacing .3s ease-out;
     cursor: pointer;
+    user-select: none;
 }
 .project-nav nav a:hover {
     letter-spacing: 0.5px;

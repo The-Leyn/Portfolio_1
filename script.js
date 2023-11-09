@@ -1,11 +1,11 @@
 // Chargement des liens des projets dans la nav (Au chargement de la page)
 document.addEventListener("DOMContentLoaded", function () {
     const mainInfo = document.querySelector('.main-info');
-    const mainDescription = document.querySelector('.main-description');
-    const titleProject = document.querySelector('.main-info h2');
-    const projectNav = document.querySelector('.project-nav nav');
+    let mainDescription = document.querySelector('.main-description');
+    let titleProject = document.querySelector('.main-info h2');
+    let projectNav = document.querySelector('.project-nav nav');
 
-    const index = mainInfo.innerHTML;
+    let index = mainInfo.innerHTML;
     
     fetch("projects.json")
         .then(response => {
@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 navLienProjet.addEventListener('click', function () {
                     if (titleProject.textContent === project.name) {
                        mainInfo.innerHTML = index;
+                       
+                       mainDescription = document.querySelector('.main-description');
+                       titleProject = document.querySelector('.main-info h2');
+                       projectNav = document.querySelector('.project-nav nav');
 
                     } else {
                         
@@ -77,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
                         mainDescription.innerHTML = '';
                         mainDescription.appendChild(mainProject);
+                        
+
                     }
 
                 });
