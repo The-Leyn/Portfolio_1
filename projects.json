@@ -1,23 +1,23 @@
 [
     {
         "name": "Nom du projet 1",
-        "description": "Description du projet 1",
+        "description": ["Mon premier projet professionnel.", "Un site pour un artiste, j'ai du créer une galerie pour que l'artiste puisse y exposé ses oeuvres."],
         "image": "air-jordan-1-zoom-cmft-2.jpg",
         "linkGithub": "https://github.com/votreutilisateur/projet1",
         "linkProject": "https://projet1.com"
     },
     {
         "name": "Nom du projet 2",
-        "description": "Description du projet 2",
+        "description": ["Description du projet 2"],
         "image": "nike-sb-zoom-nyjah-3.webp",
         "linkGithub": "https://github.com/votreutilisateur/projet2",
         "linkProject": "https://projet2.com"
     },
     {
         "name": "Nom du projet 3",
-        "description": "Description du projet 3",
+        "description": ["Description du projet 3"],
         "image": "nike-balzer-mid.webp",
         "linkGithub": "https://github.com/votreutilisateur/projet2",
-        "linkProjet": "https://projet2.com"
+        "linkProject": "https://projet3.com"
     } 
 ]

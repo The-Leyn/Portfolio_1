@@ -248,7 +248,7 @@ main {
     user-select: none;
 }
 .project-nav nav a:hover {
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 .project-nav nav a::after {
     content: '';
@@ -258,6 +258,9 @@ main {
     background: var(--main-content-bg-color);
     width: 100%;
     height: 1px;
+}
+.nav-active {
+    letter-spacing: 1px;
 }
 /* END MAIN */
 /* RESPONSIVE */
@@ -310,3 +313,50 @@ main {
 
 }
 /* END RESPONSIVE */
+/* ANIMATION */
+.fade-on-load {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
+}
+.fade {
+    
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; 
+    -webkit-animation: fadein 1s;
+    -o-animation: fadein 1s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* END ANIMATION */
