@@ -77,26 +77,37 @@ document.addEventListener("DOMContentLoaded", function () {
                             descriptionProject.appendChild(paragraphe)
                         });
 
-                        // Création de la div qui contient les liens du projets
-                        const projectLinks = document.createElement('div');
-                        projectLinks.classList.add('project-links');
+                        if (project.linkProject || project.linkGithub) {
+                            
+                            // Création de la div qui contient les liens du projets
+                            const projectLinks = document.createElement('div');
+                            projectLinks.classList.add('project-links');
+    
+                            // Création des liens du projets
+    
+                            if (project.linkProject) {
+                                console.log('test');
+                                const viewSiteLink = document.createElement('a')
+                                viewSiteLink.textContent = 'View site';
+                                viewSiteLink.setAttribute('href', project.linkProject);
+    
+                                projectLinks.appendChild(viewSiteLink);
+                            }
+    
+                            if (project.linkGithub) {
+                                const githubLink = document.createElement('a')
+                                githubLink.textContent = 'GitHub';
+                                githubLink.setAttribute('href', project.linkGithub);
+    
+                                projectLinks.appendChild(githubLink);
+                            }
+                            
+                            descriptionProject.appendChild(projectLinks)
+                        }
 
-                        // Création des liens du projets
-
-                        const viewSiteLink = document.createElement('a')
-                        viewSiteLink.textContent = 'View site';
-                        viewSiteLink.setAttribute('href', project.linkProject);
-
-                        const githubLink = document.createElement('a')
-                        githubLink.textContent = 'GitHub';
-                        githubLink.setAttribute('href', project.linkGithub);
-
-                        projectLinks.appendChild(viewSiteLink);
-                        projectLinks.appendChild(githubLink);
 
                         // descriptionProject.appendChild(paragrapheProject);
 
-                        descriptionProject.appendChild(projectLinks)
 
                         mainProject.appendChild(imageProject);
                         mainProject.appendChild(descriptionProject)
