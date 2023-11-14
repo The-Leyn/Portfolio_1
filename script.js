@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Création de l'image
                         const imageProject = document.createElement('img');
                         imageProject.setAttribute('src', 'images/' + project.image);
-                        imageProject.setAttribute('alt', 'test');
+                        imageProject.setAttribute('alt', 'project');
 
                         // Création de la div description
 
@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             // console.log(element);
                             const paragraphe = document.createElement('p');
                             paragraphe.textContent = element;
-                            console.log(paragraphe.innerHTML);
                             descriptionProject.appendChild(paragraphe)
                         });
 
@@ -86,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             // Création des liens du projets
     
                             if (project.linkProject) {
-                                console.log('test');
                                 const viewSiteLink = document.createElement('a')
                                 viewSiteLink.textContent = 'View site';
                                 viewSiteLink.setAttribute('href', project.linkProject);
@@ -117,9 +115,50 @@ document.addEventListener("DOMContentLoaded", function () {
                         mainDescription.appendChild(mainProject);
 
 
-                    }
+                        let imgProject = document.querySelector('.main-project img');
+                        console.log(imgProject);
 
+                        // Carousel pour les images
+                        imgProject.addEventListener('click', () => {
+                            console.log('click image');
+                            const backgroundCarousel = document.createElement('div');
+                            backgroundCarousel.classList.add('bg-carousel')
+                            
+                            // Croix pour quitter le carousel
+                            const quitCarousel = document.createElement('div')
+                            quitCarousel.classList.add('quit-carousel')
+                            for (let i = 0; i < 2; i++) {
+                                const quitCross = document.createElement('span');
+                                quitCarousel.appendChild(quitCross)
+                            }
+                            backgroundCarousel.appendChild(quitCarousel)
+                            // img Carousel
+                            const imageCarousel =  document.createElement('img')
+                            imageCarousel.setAttribute('src', `images/${project.image}`)
+                            backgroundCarousel.appendChild(imageCarousel)
+
+                            document.body.appendChild(backgroundCarousel);
+
+                            quitCarousel.addEventListener('click', () => {
+                                document.body.removeChild(backgroundCarousel);
+                            })
+                            // Navigation carousel
+                            for (let i = 0; i < 2; i++) {
+                                const toggleCarousel = document.createElement('div')
+                                toggleCarousel.classList.add('toggle-carousel')
+
+                                for (let i = 0; i < 2; i++) {
+                                    const buttonCarousel = document.createElement('span');
+                                    toggleCarousel.appendChild(buttonCarousel)
+                                }
+                                backgroundCarousel.appendChild(toggleCarousel)
+                            }
+
+                        })
+                    }
                 });
+                
+
             });
         })
         .catch(error => console.error(error)); // Gérer les erreurs de chargement
