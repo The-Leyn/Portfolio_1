@@ -269,12 +269,15 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     background: #031927b6;
     /* cursor: pointer; */
     display: flex;
     justify-content: center;
-    align-items: flex-start
+    align-items: center;
+}
+.bg-carousel img {
+    width: 100%;
 }
 .quit-carousel {
     position: fixed;
@@ -325,6 +328,8 @@ main {
     background: white;
     position: absolute;
     border-radius: 999px;
+    box-shadow: #000 0 0 5px;
+
 }
 .toggle-carousel:nth-of-type(2) span:first-of-type {
     transform:translateY(-16.5px) translateX(-100%) rotate(-45deg) ;
@@ -381,6 +386,9 @@ main {
     }
     .main-project {
         flex-direction: column;
+    }
+    .main-project img {
+        max-width: 100%;        
     }
     .project-nav {
         width: 100%;

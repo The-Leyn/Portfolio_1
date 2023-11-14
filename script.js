@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         // Création de l'image
                         const imageProject = document.createElement('img');
-                        imageProject.setAttribute('src', 'images/' + project.image);
+                        imageProject.setAttribute('src', 'images/' + project.images[0]);
                         imageProject.setAttribute('alt', 'project');
 
                         // Création de la div description
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         descriptionProject.classList.add('description-project');
 
                         // Création des paragraphes
-                        
+
                         project.description.forEach(element => {
                             // console.log(element);
                             const paragraphe = document.createElement('p');
@@ -77,29 +77,29 @@ document.addEventListener("DOMContentLoaded", function () {
                         });
 
                         if (project.linkProject || project.linkGithub) {
-                            
+
                             // Création de la div qui contient les liens du projets
                             const projectLinks = document.createElement('div');
                             projectLinks.classList.add('project-links');
-    
+
                             // Création des liens du projets
-    
+
                             if (project.linkProject) {
                                 const viewSiteLink = document.createElement('a')
                                 viewSiteLink.textContent = 'View site';
                                 viewSiteLink.setAttribute('href', project.linkProject);
-    
+
                                 projectLinks.appendChild(viewSiteLink);
                             }
-    
+
                             if (project.linkGithub) {
                                 const githubLink = document.createElement('a')
                                 githubLink.textContent = 'GitHub';
                                 githubLink.setAttribute('href', project.linkGithub);
-    
+
                                 projectLinks.appendChild(githubLink);
                             }
-                            
+
                             descriptionProject.appendChild(projectLinks)
                         }
 
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             console.log('click image');
                             const backgroundCarousel = document.createElement('div');
                             backgroundCarousel.classList.add('bg-carousel')
-                            
+
                             // Croix pour quitter le carousel
                             const quitCarousel = document.createElement('div')
                             quitCarousel.classList.add('quit-carousel')
@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
                             backgroundCarousel.appendChild(quitCarousel)
                             // img Carousel
-                            const imageCarousel =  document.createElement('img')
-                            imageCarousel.setAttribute('src', `images/${project.image}`)
-                            backgroundCarousel.appendChild(imageCarousel)
+                            const baseImageCarousel = document.createElement('img')
+                            baseImageCarousel.setAttribute('src', `images/${project.images[0]}`)
+                            backgroundCarousel.appendChild(baseImageCarousel)
 
                             document.body.appendChild(backgroundCarousel);
 
@@ -143,21 +143,61 @@ document.addEventListener("DOMContentLoaded", function () {
                                 document.body.removeChild(backgroundCarousel);
                             })
                             // Navigation carousel
-                            for (let i = 0; i < 2; i++) {
-                                const toggleCarousel = document.createElement('div')
-                                toggleCarousel.classList.add('toggle-carousel')
-
+                            if (project.images.length > 1) {
                                 for (let i = 0; i < 2; i++) {
-                                    const buttonCarousel = document.createElement('span');
-                                    toggleCarousel.appendChild(buttonCarousel)
+                                    const toggleCarousel = document.createElement('div')
+                                    toggleCarousel.classList.add('toggle-carousel')
+    
+                                    for (let i = 0; i < 2; i++) {
+                                        const buttonCarousel = document.createElement('span');
+                                        toggleCarousel.appendChild(buttonCarousel)
+                                    }
+                                    backgroundCarousel.appendChild(toggleCarousel)
                                 }
-                                backgroundCarousel.appendChild(toggleCarousel)
                             }
 
+                            let indexImage = 0;
+
+                            function updateImageSlider(direction) {
+                                let lengthImagesProject = project.images.length;
+                                let imgCarousel = document.querySelector('.bg-carousel img');
+
+                                if (direction === 'next') {
+                                    indexImage++;
+                                    console.log(indexImage);
+
+                                    if (indexImage < lengthImagesProject) {
+                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
+                                    } else {
+                                        indexImage = 0;
+                                        imgCarousel.setAttribute('src', `images/${project.images[0]}`);
+                                    }
+                                } else if (direction === 'prev') {
+                                    indexImage--;
+                                    console.log(indexImage);
+
+                                    if (indexImage < 0) {
+                                        indexImage = lengthImagesProject - 1;
+                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
+                                    } else {
+                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
+                                    }
+                                }
+                            }
+
+                            const slideNext = document.querySelector('.toggle-carousel:nth-of-type(3)');
+                            slideNext.addEventListener('click', () => {
+                                updateImageSlider('next');
+                            });
+
+                            const slidePrev = document.querySelector('.toggle-carousel:nth-of-type(2)');
+                            slidePrev.addEventListener('click', () => {
+                                updateImageSlider('prev');
+                            });
                         })
                     }
                 });
-                
+
 
             });
         })
