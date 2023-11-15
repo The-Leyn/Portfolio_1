@@ -127,10 +127,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             // Croix pour quitter le carousel
                             const quitCarousel = document.createElement('div')
                             quitCarousel.classList.add('quit-carousel')
-                            for (let i = 0; i < 2; i++) {
-                                const quitCross = document.createElement('span');
+                            // for (let i = 0; i < 2; i++) {
+                                const quitCross = document.createElement('i');
+                                quitCross.classList.add('bi')
+                                quitCross.classList.add('bi-x')
                                 quitCarousel.appendChild(quitCross)
-                            }
+                            // }
                             backgroundCarousel.appendChild(quitCarousel)
                             // img Carousel
                             const baseImageCarousel = document.createElement('img')
@@ -148,42 +150,58 @@ document.addEventListener("DOMContentLoaded", function () {
                                     const toggleCarousel = document.createElement('div')
                                     toggleCarousel.classList.add('toggle-carousel')
     
-                                    for (let i = 0; i < 2; i++) {
-                                        const buttonCarousel = document.createElement('span');
-                                        toggleCarousel.appendChild(buttonCarousel)
-                                    }
+                                    // for (let i = 0; i < 2; i++) {
+                                        if (i === 0) {
+                                            const buttonCarousel = document.createElement('i');
+                                            buttonCarousel.classList.add('bi')
+                                            buttonCarousel.classList.add('bi-chevron-left')
+                                            toggleCarousel.appendChild(buttonCarousel)
+                                            
+                                        }else if(i === 1){
+                                            const buttonCarousel = document.createElement('i');
+                                            buttonCarousel.classList.add('bi')
+                                            buttonCarousel.classList.add('bi-chevron-right')
+                                            toggleCarousel.appendChild(buttonCarousel)
+                                        }
+                                    // }
                                     backgroundCarousel.appendChild(toggleCarousel)
                                 }
+                                const navIndicator = document.createElement('div')
+                                navIndicator.classList.add('nav-indicator')
+                                
+                                for (let i = 0; i < project.images.length; i++) {
+                                    const dots = document.createElement('span')
+                                    if (i === 0) {
+                                        dots.classList.add('active')
+                                    }
+                                    navIndicator.appendChild(dots)
+                                }
+                                backgroundCarousel.appendChild(navIndicator)
+
                             }
 
+                            
                             let indexImage = 0;
 
                             function updateImageSlider(direction) {
-                                let lengthImagesProject = project.images.length;
-                                let imgCarousel = document.querySelector('.bg-carousel img');
+                                const lengthImagesProject = project.images.length;
+                                const imgCarousel = document.querySelector('.bg-carousel img');
+                                const allDots = document.querySelectorAll('.nav-indicator span');
+
+                                allDots.forEach(dot => dot.classList.remove('active'));
 
                                 if (direction === 'next') {
-                                    indexImage++;
-                                    console.log(indexImage);
-
-                                    if (indexImage < lengthImagesProject) {
-                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
-                                    } else {
-                                        indexImage = 0;
-                                        imgCarousel.setAttribute('src', `images/${project.images[0]}`);
-                                    }
+                                    indexImage = (indexImage + 1) % lengthImagesProject;
                                 } else if (direction === 'prev') {
-                                    indexImage--;
-                                    console.log(indexImage);
-
-                                    if (indexImage < 0) {
-                                        indexImage = lengthImagesProject - 1;
-                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
-                                    } else {
-                                        imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
-                                    }
+                                    indexImage = (indexImage - 1 + lengthImagesProject) % lengthImagesProject;
                                 }
+
+                                imgCarousel.setAttribute('src', `images/${project.images[indexImage]}`);
+
+                                const activeDot = document.querySelector(`.nav-indicator span:nth-of-type(${indexImage + 1})`);
+                                activeDot.classList.add('active');
                             }
+
 
                             const slideNext = document.querySelector('.toggle-carousel:nth-of-type(3)');
                             slideNext.addEventListener('click', () => {
