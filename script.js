@@ -54,8 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         // Création de la div main-project
                         const mainProject = document.createElement('div');
-                        mainProject.classList.add('main-project');
-                        mainProject.classList.add('fade');
+                        mainProject.className = 'main-project fade'
+                        
+
+                        // Conteneur image
+                        const imageContainer = document.createElement('div')
+                        imageContainer.className = 'img-container'
+                        const infoImage = document.createElement('div')
+                        infoImage.className = 'info-img'
+                        if (project.images.length < 2) {
+                            infoImage.innerHTML = '<i class="bi bi-images"></i>'
+                        }else {
+                            infoImage.innerHTML = '<i class="bi bi-images"></i>' + project.images.length
+
+                        }
+                        imageContainer.appendChild(infoImage)
 
                         // Création de l'image
                         const imageProject = document.createElement('img');
@@ -80,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             // Création de la div qui contient les liens du projets
                             const projectLinks = document.createElement('div');
-                            projectLinks.classList.add('project-links');
+                            projectLinks.className = 'project-links'
 
                             // Création des liens du projets
 
@@ -106,8 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         // descriptionProject.appendChild(paragrapheProject);
 
+                        imageContainer.appendChild(imageProject)
+                        mainProject.appendChild(imageContainer);
 
-                        mainProject.appendChild(imageProject);
+
+                        // mainProject.appendChild(imageProject);
                         mainProject.appendChild(descriptionProject)
 
 
@@ -120,19 +136,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         // Carousel pour les images
                         imgProject.addEventListener('click', () => {
-                            console.log('click image');
                             const backgroundCarousel = document.createElement('div');
-                            backgroundCarousel.classList.add('bg-carousel')
+                            backgroundCarousel.className = 'bg-carousel'
 
                             // Croix pour quitter le carousel
                             const quitCarousel = document.createElement('div')
                             quitCarousel.classList.add('quit-carousel')
-                            // for (let i = 0; i < 2; i++) {
-                                const quitCross = document.createElement('i');
-                                quitCross.classList.add('bi')
-                                quitCross.classList.add('bi-x')
-                                quitCarousel.appendChild(quitCross)
-                            // }
+                            quitCarousel.className = 'quit-carousel'
+                            const quitCross = document.createElement('i');
+                            quitCross.className = 'bi bi-x'
+                            quitCarousel.appendChild(quitCross)
+                            
                             backgroundCarousel.appendChild(quitCarousel)
                             // img Carousel
                             const baseImageCarousel = document.createElement('img')
@@ -153,21 +167,19 @@ document.addEventListener("DOMContentLoaded", function () {
                                     // for (let i = 0; i < 2; i++) {
                                         if (i === 0) {
                                             const buttonCarousel = document.createElement('i');
-                                            buttonCarousel.classList.add('bi')
-                                            buttonCarousel.classList.add('bi-chevron-left')
+                                            buttonCarousel.className = 'bi bi-chevron-left'
                                             toggleCarousel.appendChild(buttonCarousel)
                                             
                                         }else if(i === 1){
                                             const buttonCarousel = document.createElement('i');
-                                            buttonCarousel.classList.add('bi')
-                                            buttonCarousel.classList.add('bi-chevron-right')
+                                            buttonCarousel.className = 'bi bi-chevron-right'
                                             toggleCarousel.appendChild(buttonCarousel)
                                         }
                                     // }
                                     backgroundCarousel.appendChild(toggleCarousel)
                                 }
                                 const navIndicator = document.createElement('div')
-                                navIndicator.classList.add('nav-indicator')
+                                navIndicator.className = 'nav-indicator'
                                 
                                 for (let i = 0; i < project.images.length; i++) {
                                     const dots = document.createElement('span')
