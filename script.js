@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Création de la div main-project
                         const mainProject = document.createElement('div');
                         mainProject.className = 'main-project fade'
-                        
+
 
                         // Conteneur image
                         const imageContainer = document.createElement('div')
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         infoImage.className = 'info-img'
                         if (project.images.length < 2) {
                             infoImage.innerHTML = '<i class="bi bi-images"></i>'
-                        }else {
+                        } else {
                             infoImage.innerHTML = '<i class="bi bi-images"></i>' + project.images.length
 
                         }
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             const quitCross = document.createElement('i');
                             quitCross.className = 'bi bi-x'
                             quitCarousel.appendChild(quitCross)
-                            
+
                             backgroundCarousel.appendChild(quitCarousel)
                             // img Carousel
                             const baseImageCarousel = document.createElement('img')
@@ -163,24 +163,24 @@ document.addEventListener("DOMContentLoaded", function () {
                                 for (let i = 0; i < 2; i++) {
                                     const toggleCarousel = document.createElement('div')
                                     toggleCarousel.classList.add('toggle-carousel')
-    
+
                                     // for (let i = 0; i < 2; i++) {
-                                        if (i === 0) {
-                                            const buttonCarousel = document.createElement('i');
-                                            buttonCarousel.className = 'bi bi-chevron-left'
-                                            toggleCarousel.appendChild(buttonCarousel)
-                                            
-                                        }else if(i === 1){
-                                            const buttonCarousel = document.createElement('i');
-                                            buttonCarousel.className = 'bi bi-chevron-right'
-                                            toggleCarousel.appendChild(buttonCarousel)
-                                        }
+                                    if (i === 0) {
+                                        const buttonCarousel = document.createElement('i');
+                                        buttonCarousel.className = 'bi bi-chevron-left'
+                                        toggleCarousel.appendChild(buttonCarousel)
+
+                                    } else if (i === 1) {
+                                        const buttonCarousel = document.createElement('i');
+                                        buttonCarousel.className = 'bi bi-chevron-right'
+                                        toggleCarousel.appendChild(buttonCarousel)
+                                    }
                                     // }
                                     backgroundCarousel.appendChild(toggleCarousel)
                                 }
                                 const navIndicator = document.createElement('div')
                                 navIndicator.className = 'nav-indicator'
-                                
+
                                 for (let i = 0; i < project.images.length; i++) {
                                     const dots = document.createElement('span')
                                     if (i === 0) {
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                             }
 
-                            
+
                             let indexImage = 0;
 
                             function updateImageSlider(direction) {
@@ -225,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 updateImageSlider('prev');
                             });
                         })
+                        
                     }
                 });
 

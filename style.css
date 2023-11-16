@@ -297,6 +297,9 @@ main {
     justify-content: center;
     align-items: flex-start;
 }
+.bg-carousel img {
+    width: 100%;
+}
 .quit-carousel {
     position: fixed;
     right: 2vw;
