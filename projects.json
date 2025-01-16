@@ -1,13 +1,13 @@
 [
     {
         "name": "Condorcet",
-        "description": ["Réalisée dans le cadre de ma deuxième année à HETIC, cette application me permet de gérer des scrutins en utilisant la méthode Condorcet. Ce projet m'a permis de me familiariser avec MongoDB pour la gestion de la base de données et Flask, un framework Python pour le développement backend. Les différents cas d'utilisation ainsi que les détails techniques sont disponibles sur le GitHub du projet"],
+        "description": ["Réalisée dans le cadre de ma deuxième année à HETIC, cette application me permet de gérer des scrutins en utilisant la méthode Condorcet.", "Ce projet m'a permis de me familiariser avec MongoDB pour la gestion de la base de données et Flask, un framework Python pour le développement backend. Les différents cas d'utilisation ainsi que les détails techniques sont disponibles sur le GitHub du projet"],
         "images": ["index_condorcet.webp", "connexion_condorcet.webp", "profile_condorcet.webp", "vote_condorcet.webp", "result_condorcet.webp"],
         "linkGithub": "https://github.com/The-Leyn/Condorcet"
     },
     {
         "name": "Paris Écran",
-        "description": ["Paris Écran est une application web développée dans le cadre d’un projet scolaire. Ce projet met en avant la gestion back-end d’une application PHP reposant sur une base de données MySQL. Paris Écran permet de gérer l’ensemble des étapes liées à la gestion cinématographique, allant de l’inscription des utilisateurs à la gestion des films, des réservations et des commentaires. Il propose également des outils avancés pour l’administration et l’analyse statistique."],
+        "description": ["Paris Écran est une application web développée dans le cadre d’un projet scolaire." , "Ce projet met en avant la gestion back-end d’une application PHP reposant sur une base de données MySQL. Paris Écran permet de gérer l’ensemble des étapes liées à la gestion cinématographique, allant de l’inscription des utilisateurs à la gestion des films, des réservations et des commentaires. Il propose également des outils avancés pour l’administration et l’analyse statistique."],
         "images": ["films_paris_ecran.webp", "cinemas_paris_ecran.webp", "film_paris_ecran.webp", "film2_paris_ecran.webp", "actors_paris_ecran.webp"],
         "linkGithub": "https://github.com/Woodiss/ParisEcran"
     },
