@@ -15,7 +15,7 @@
         "name": "Lumina Arts",
         "description": ["Mon premier projet professionnel a été réalisé lors d'un stage.","Ce site avait pour objectif de tester et comprendre la gestion ainsi que la production de projets web. J'ai suivi toutes les étapes, de l'élaboration du cahier des charges au maquettage, puis à la production du site web, et enfin à son déploiement.", "Il s'agit d'un site dédié à un artiste qui y expose ses œuvres."],
         "images": ["luminaArtsIndex.webp","luminaArtsGallery.webp","luminaArtsAbout.webp","luminaArtsContact.webp"],
-        "linkGithub": "https://github.com/votreutilisateur/projet1",
-        "linkProject": "https://projet1.com"
+        "linkGithub": "https://github.com/The-Leyn/Lumina_Art",
+        "linkProject": ""
     }
 ]

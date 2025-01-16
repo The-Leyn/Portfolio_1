@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -191,6 +192,24 @@ main {
         border-radius: 10px;
         object-fit: cover;
         cursor: pointer;
+    }
+    .img-container img:hover {
+        opacity: 70%;
+    }
+    .img-container .info-img {
+        position: absolute;
+        right: 5px;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: var(--main-primary-text-color);
+        font-size: var(--font-size-content-text-and-links-responsive);
+        font-weight: var(--font-weight-content-title);
+        text-shadow: var(--main-bg-color) 0 0 0.8vw;
+        z-index: 8;
+        user-select: none;
     }
     .img-container img:hover {
         opacity: 70%;
