@@ -1,27 +1,21 @@
 [
     {
+        "name": "Condorcet",
+        "description": ["Réalisée dans le cadre de ma deuxième année à HETIC, cette application me permet de gérer des scrutins en utilisant la méthode Condorcet. Ce projet m'a permis de me familiariser avec MongoDB pour la gestion de la base de données et Flask, un framework Python pour le développement backend. Les différents cas d'utilisation ainsi que les détails techniques sont disponibles sur le GitHub du projet"],
+        "images": ["index_condorcet.webp", "connexion_condorcet.webp", "profile_condorcet.webp", "vote_condorcet.webp", "result_condorcet.webp"],
+        "linkGithub": "https://github.com/The-Leyn/Condorcet"
+    },
+    {
+        "name": "Paris Écran",
+        "description": ["Paris Écran est une application web développée dans le cadre d’un projet scolaire. Ce projet met en avant la gestion back-end d’une application PHP reposant sur une base de données MySQL. Paris Écran permet de gérer l’ensemble des étapes liées à la gestion cinématographique, allant de l’inscription des utilisateurs à la gestion des films, des réservations et des commentaires. Il propose également des outils avancés pour l’administration et l’analyse statistique."],
+        "images": ["films_paris_ecran.webp", "cinemas_paris_ecran.webp", "film_paris_ecran.webp", "film2_paris_ecran.webp", "actors_paris_ecran.webp"],
+        "linkGithub": "https://github.com/Woodiss/ParisEcran"
+    },
+    {
         "name": "Lumina Arts",
         "description": ["Mon premier projet professionnel a été réalisé lors d'un stage.","Ce site avait pour objectif de tester et comprendre la gestion ainsi que la production de projets web. J'ai suivi toutes les étapes, de l'élaboration du cahier des charges au maquettage, puis à la production du site web, et enfin à son déploiement.", "Il s'agit d'un site dédié à un artiste qui y expose ses œuvres."],
-        "images": ["luminaArts.png","nike-balzer-mid.webp","nike-sb-zoom-nyjah-3.webp"],
+        "images": ["luminaArtsIndex.webp","luminaArtsGallery.webp","luminaArtsAbout.webp","luminaArtsContact.webp"],
         "linkGithub": "https://github.com/votreutilisateur/projet1",
         "linkProject": "https://projet1.com"
-    },
-    {
-        "name": "Nom du projet 1",
-        "description": ["Mon premier projet professionnel.", "Un site pour un artiste, j'ai du créer une galerie pour que l'artiste puisse y exposé ses oeuvres."],
-        "images": ["air-jordan-1-zoom-cmft-2.jpg"],
-        "linkGithub": "https://github.com/votreutilisateur/projet1"
-    },
-    {
-        "name": "Nom du projet 2",
-        "description": ["Description du projet 2"],
-        "images": ["nike-sb-zoom-nyjah-3.webp","air-jordan-1-zoom-cmft-2.jpg"],
-        "linkProject": "https://projet2.com"
-    },
-    {
-        "name": "Nom du projet 3",
-        "description": ["Description du projet 3"],
-        "images": ["nike-balzer-mid.webp"]
-       
-    } 
+    }
 ]
