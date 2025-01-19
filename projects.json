@@ -12,10 +12,17 @@
         "linkGithub": "https://github.com/Woodiss/ParisEcran"
     },
     {
+        "name": "Charles Allard",
+        "description": ["Charles Allard est un site e-commerce complet développé avec Symfony.", "Ce projet a été présenté lors de l'examen pour l'obtention de mon titre professionnel de Développeur Web et Web Mobile, et m'a permis de réussir cette certification.", "Le processus de création a suivi plusieurs étapes clés : l'établissement du cahier des charges, la réalisation des maquettes et prototypes, l'intégration, et enfin le déploiement du site." ],
+        "images": ["index1_charles_allard.webp", "index2_charles_allard.webp", "index3_charles_allard.webp", "history_charles_allard.webp", "knowledge_charles_allard.webp", "watchs_charles_allard.webp", "watch_charles_allard.webp", "watch_slider_charles_allard.webp", "cart_charles_allard.webp", "login_charles_allard.webp", "register_charles_allard.webp", "stripe_charles_allard.webp"],
+        "linkGithub": "https://github.com/The-Leyn/E-comerce-Charles-Allard",
+        "linkProject": "https://charles.allard.ma6tvacoder.org/"
+    },
+    {
         "name": "Lumina Arts",
         "description": ["Mon premier projet professionnel a été réalisé lors d'un stage.","Ce site avait pour objectif de tester et comprendre la gestion ainsi que la production de projets web. J'ai suivi toutes les étapes, de l'élaboration du cahier des charges au maquettage, puis à la production du site web, et enfin à son déploiement.", "Il s'agit d'un site dédié à un artiste qui y expose ses œuvres."],
         "images": ["luminaArtsIndex.webp","luminaArtsGallery.webp","luminaArtsAbout.webp","luminaArtsContact.webp"],
-        "linkGithub": "https://github.com/The-Leyn/Lumina_Art",
-        "linkProject": ""
+        "linkGithub": "https://github.com/The-Leyn/Lumina_Art"
+        
     }
 ]
